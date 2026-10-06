@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Tracker Kuliah</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="profil">
+
+        <img src="https://i.pinimg.com/736x/5b/f6/77/5bf677b52de3c6581539f55a636ab7a7.jpg"
+            alt="Minji anggota Girl Group yang bernama Newjeans">
+
+        <div class="taskimg">
+            <img src="assets/Task Tracker.svg" alt="task traker">
+        </div>
+
+        <div class="minjiimg">
+            <img src="assets/minjiit.svg" alt="minji it">
+        </div>
+
+        <div class="task-container">
+
+            <h3 class="task-heading">My Task!</h3>
+
+            <form id="taskForm">
+
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Judul tugas (min. 3 karakter)" required>
+                </div>
+
+                <div class="task-detail">
+
+                    <select id="categorySelect" required>
+                        <option value="">Pilih Mata Kuliah</option>
+                        <option value="Pemrograman Web">
+                            Pemrograman Web
+                        </option>
+                        <option value="Keamanan Jaringan Komputer">
+                            Keamanan Jaringan Komputer
+                        </option>
+                        <option value="Komunikasi Data dan Jaringan Komputer">
+                            Komunikasi Data dan Jaringan Komputer
+                        </option>
+                        <option value="Ethical Hacking">
+                            Ethical Hacking
+                        </option>
+                        <option value="Internet of Things">
+                            Internet of Things
+                        </option>
+                    </select>
+
+                    <input type="date" id="deadlineInput" required>
+
+                </div>
+
+                <button type="submit" class="add-btn">
+                    Tambah
+                </button>
+
+                <p id="errorMessage" class="error-message"></p>
+
+            </form>
+
+            <div class="filter-section">
+
+                <button type="button" class="filter-btn active" data-filter="all">
+                    Semua
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="active">
+                    Aktif
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="completed">
+                    Selesai
+                </button>
+
+                <span id="taskCounter">
+                    0 tugas aktif
+                </span>
+
+            </div>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <p id="emptyMessage" class="empty-message">
+                Belum ada tugas.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
+
+<!-- https://chatgpt.com/share/6ac4b515-3548-83ec-a63e-30c66557b82f -->
